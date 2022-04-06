@@ -1,0 +1,75 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.card {
+  height: 60vh;
+  width: 50vw;
+  background-color: #9ba4c9;
+  border-radius: 5px;
+}
+
+.card h1 {
+  padding-top: 30px;
+}
+
+.check {
+  height: 100px;
+  width: 100px;
+  background-color: #17181c;
+  position: relative;
+  margin: 0 auto;
+  top: 35%;
+  border-radius: 20px;
+}
+
+.check:before {
+  content: "";
+  background-color: #fb4653;
+  position: absolute;
+  left: 15px;
+  top: 45px;
+  height: 10px;
+  width: 70px;
+  transform: rotate(0deg);
+  transition: 0.5s ease;
+  transition: transform 330ms ease-in-out;
+}
+
+.check:after {
+  content: "";
+  background-color: #fb4653;
+  position: absolute;
+  top: 45px;
+  left: 15px;
+  height: 10px;
+  width: 70px;
+  transition: 0.5s ease;
+}
+
+.check:hover:before {
+  background-color: green;
+  transform: rotate(90deg);
+  transition: transform 330ms ease-in-out;
+  transition: 0.5s ease;
+}
+
+.check:hover:after {
+  background-color: green;
+  transition: transform 330ms ease-in-out;
+  transition: 0.5s ease;
+}
+
+.check:not(:hover) {
+  transition: transform 330ms ease-in-out;
+}
+
+.check:before:not(:hover) {
+  transform: rotate(0);
+  transition: transform 330ms ease-in-out;
+}
+
+.check:not(:hover:after) {
+  transition: transform 330ms ease-in-out;
+}
